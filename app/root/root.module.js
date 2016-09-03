@@ -11,13 +11,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var root_component_1 = require('./root.component');
+var shows_component_1 = require('../shows/shows.component');
+var show_list_component_1 = require('../show-list/show-list.component');
 var RootModule = (function () {
     function RootModule() {
     }
     RootModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            declarations: [root_component_1.RootComponent],
+            declarations: [
+                root_component_1.RootComponent,
+                shows_component_1.ShowsComponent,
+                show_list_component_1.ShowListComponent
+            ],
             bootstrap: [root_component_1.RootComponent]
         }), 
         __metadata('design:paramtypes', [])

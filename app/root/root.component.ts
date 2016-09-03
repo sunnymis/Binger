@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'main-component',
-  template: '<h1>Binger</h1>'
+  selector: 'root-component',
+  template: `
+  <h1>Binger</h1>
+  <shows-component></shows-component>
+  `
 })
 
 export class RootComponent { }
