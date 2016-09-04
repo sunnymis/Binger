@@ -15,6 +15,7 @@ var shows_component_1 = require('../shows/shows.component');
 var show_list_component_1 = require('../show-list/show-list.component');
 var nav_component_1 = require('../nav/nav.component');
 var finished_shows_component_1 = require('../finished-shows/finished-shows.component');
+var show_details_component_1 = require('../show-details/show-details.component');
 var root_routing_1 = require('./root.routing');
 var RootModule = (function () {
     function RootModule() {
@@ -31,6 +32,7 @@ var RootModule = (function () {
                 show_list_component_1.ShowListComponent,
                 nav_component_1.NavComponent,
                 finished_shows_component_1.FinishedShowsComponent,
+                show_details_component_1.ShowDetailsComponent,
                 root_routing_1.routedComponents
             ],
             bootstrap: [root_component_1.RootComponent]

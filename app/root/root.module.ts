@@ -6,6 +6,7 @@ import { ShowsComponent } from '../shows/shows.component';
 import { ShowListComponent } from '../show-list/show-list.component';
 import { NavComponent } from '../nav/nav.component';
 import { FinishedShowsComponent } from '../finished-shows/finished-shows.component';
+import { ShowDetailsComponent } from '../show-details/show-details.component';
 import { routing, routedComponents } from './root.routing';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { routing, routedComponents } from './root.routing';
     ShowListComponent,
     NavComponent,
     FinishedShowsComponent,
+    ShowDetailsComponent,
     routedComponents
   ],
   bootstrap:    [ RootComponent ]

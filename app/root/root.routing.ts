@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ShowsComponent } from '../shows/shows.component';
 import { FinishedShowsComponent } from '../finished-shows/finished-shows.component';
+import { ShowDetailsComponent } from '../show-details/show-details.component';
 
 const appRoutes: Routes = [
 	{
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
 	{
 		path: 'finished',
 		component: FinishedShowsComponent
+	},
+	{
+		path: 'details/:id',
+		component: ShowDetailsComponent
 	}
 ];
 
