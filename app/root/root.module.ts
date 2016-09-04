@@ -4,13 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RootComponent }  from './root.component';
 import { ShowsComponent } from '../shows/shows.component';
 import { ShowListComponent } from '../show-list/show-list.component';
+import { NavComponent } from '../nav/nav.component';
+import { FinishedShowsComponent } from '../finished-shows/finished-shows.component';
+import { routing, routedComponents } from './root.routing';
 
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [
+    BrowserModule,
+    routing
+  ],
   declarations: [
     RootComponent,
     ShowsComponent,
-    ShowListComponent
+    ShowListComponent,
+    NavComponent,
+    FinishedShowsComponent,
+    routedComponents
   ],
   bootstrap:    [ RootComponent ]
 })

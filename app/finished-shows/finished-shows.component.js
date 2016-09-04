@@ -9,17 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var RootComponent = (function () {
-    function RootComponent() {
+var FinishedShowsComponent = (function () {
+    function FinishedShowsComponent() {
     }
-    RootComponent = __decorate([
+    FinishedShowsComponent.prototype.ngOnInit = function () { };
+    FinishedShowsComponent = __decorate([
         core_1.Component({
-            selector: 'root-component',
-            template: "\n  <nav-component></nav-component>\n  <h1>Binger</h1>\n  <router-outlet></router-outlet>\n  "
+            selector: 'finished-shows',
+            templateUrl: 'app/finished-shows/finished-shows.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], RootComponent);
-    return RootComponent;
+    ], FinishedShowsComponent);
+    return FinishedShowsComponent;
 }());
-exports.RootComponent = RootComponent;
-//# sourceMappingURL=root.component.js.map
+exports.FinishedShowsComponent = FinishedShowsComponent;
+//# sourceMappingURL=finished-shows.component.js.map

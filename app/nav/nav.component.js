@@ -9,17 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var RootComponent = (function () {
-    function RootComponent() {
+var NavComponent = (function () {
+    function NavComponent() {
     }
-    RootComponent = __decorate([
+    NavComponent.prototype.ngOnInit = function () { };
+    NavComponent = __decorate([
         core_1.Component({
-            selector: 'root-component',
-            template: "\n  <nav-component></nav-component>\n  <h1>Binger</h1>\n  <router-outlet></router-outlet>\n  "
+            selector: 'nav-component',
+            templateUrl: 'app/nav/nav.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], RootComponent);
-    return RootComponent;
+    ], NavComponent);
+    return NavComponent;
 }());
-exports.RootComponent = RootComponent;
-//# sourceMappingURL=root.component.js.map
+exports.NavComponent = NavComponent;
+//# sourceMappingURL=nav.component.js.map
