@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var http_1 = require('@angular/http');
 var root_component_1 = require('./root.component');
 var shows_component_1 = require('../shows/shows.component');
 var show_list_component_1 = require('../show-list/show-list.component');
@@ -17,6 +18,7 @@ var nav_component_1 = require('../nav/nav.component');
 var finished_shows_component_1 = require('../finished-shows/finished-shows.component');
 var show_details_component_1 = require('../show-details/show-details.component');
 var root_routing_1 = require('./root.routing');
+var show_service_1 = require('../services/show.service');
 var RootModule = (function () {
     function RootModule() {
     }
@@ -24,6 +26,8 @@ var RootModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                http_1.HttpModule,
+                http_1.JsonpModule,
                 root_routing_1.routing
             ],
             declarations: [
@@ -34,6 +38,9 @@ var RootModule = (function () {
                 finished_shows_component_1.FinishedShowsComponent,
                 show_details_component_1.ShowDetailsComponent,
                 root_routing_1.routedComponents
+            ],
+            providers: [
+                show_service_1.ShowService
             ],
             bootstrap: [root_component_1.RootComponent]
         }), 

@@ -1,5 +1,5 @@
-<div>
-  <h3>Show</h3>
-  <p>Description</p>
-  <p>Seasons</p>
+<div *ngFor="let show of myShows">
+  <h3>{{show.Title}}</h3>
+  <p>{{show.Plot}}</p>
+  <p><b>Seasons:</b> {{show.totalSeasons}}</p>
 </div>

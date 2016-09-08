@@ -9,16 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var show_service_1 = require('../services/show.service');
 var ShowListComponent = (function () {
-    function ShowListComponent() {
+    function ShowListComponent(showService) {
+        this.showService = showService;
     }
-    ShowListComponent.prototype.ngOnInit = function () { };
+    ShowListComponent.prototype.ngOnInit = function () { this.getShows(); };
+    ShowListComponent.prototype.getShows = function () {
+        var _this = this;
+        this.showService.getShows()
+            .subscribe(function (shows) { return _this.myShows = shows; }, function (error) { return _this.errorMessage = error; });
+    };
     ShowListComponent = __decorate([
         core_1.Component({
             selector: 'show-list',
             templateUrl: 'app/show-list/show-list.component.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [show_service_1.ShowService])
     ], ShowListComponent);
     return ShowListComponent;
 }());
