@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Show } from '../models/show';
@@ -12,7 +12,8 @@ import { Observable } from 'rxjs/Observable';
 })
 export class ShowListComponent implements OnInit {
   myShows: Show[];
-  errorMessage: string;
+
+  @Input() showList: Show[];
 
 
   constructor(
@@ -22,15 +23,10 @@ export class ShowListComponent implements OnInit {
 
   selectedShow: Show;
 
-  ngOnInit() { this.getShows(); }
-
-  getShows() {
-     this.showService.getShows()
-                    .subscribe(
-                      shows => this.myShows = shows,
-                      error => this.errorMessage = <any>error
-                    );
+  ngOnInit() {
+    this.myShows = this.showList;
   }
+
 
   onSelectShow(show: Show) {
     this.selectedShow = show;

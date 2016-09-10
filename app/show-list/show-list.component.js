@@ -16,16 +16,17 @@ var ShowListComponent = (function () {
         this.showService = showService;
         this.router = router;
     }
-    ShowListComponent.prototype.ngOnInit = function () { this.getShows(); };
-    ShowListComponent.prototype.getShows = function () {
-        var _this = this;
-        this.showService.getShows()
-            .subscribe(function (shows) { return _this.myShows = shows; }, function (error) { return _this.errorMessage = error; });
+    ShowListComponent.prototype.ngOnInit = function () {
+        this.myShows = this.showList;
     };
     ShowListComponent.prototype.onSelectShow = function (show) {
         this.selectedShow = show;
         // this.router.navigate(['/detail',show.imdbID]);
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], ShowListComponent.prototype, "showList", void 0);
     ShowListComponent = __decorate([
         core_1.Component({
             selector: 'show-list',

@@ -1,4 +1,4 @@
 <h2>Current Shows</h2>
-<show-list></show-list>
+<show-list *ngIf="currentShows" [showList]="currentShows"></show-list>
 <h2>Up Next</h2>
-<show-list></show-list>
+<show-list *ngIf="nextShows" [showList]="nextShows"></show-list>
