@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var root_component_1 = require('./root.component');
-var shows_component_1 = require('../shows/shows.component');
+var show_index_component_1 = require('../show-index/show-index.component');
 var show_list_component_1 = require('../show-list/show-list.component');
 var nav_component_1 = require('../nav/nav.component');
 var finished_shows_component_1 = require('../finished-shows/finished-shows.component');
@@ -32,7 +32,7 @@ var RootModule = (function () {
             ],
             declarations: [
                 root_component_1.RootComponent,
-                shows_component_1.ShowsComponent,
+                show_index_component_1.ShowIndexComponent,
                 show_list_component_1.ShowListComponent,
                 nav_component_1.NavComponent,
                 finished_shows_component_1.FinishedShowsComponent,

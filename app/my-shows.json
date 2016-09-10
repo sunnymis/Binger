@@ -21,7 +21,8 @@
        "imdbID":"tt4158110",
        "Type":"series",
        "totalSeasons":"2",
-       "Response":"True"
+       "Response":"True",
+       "UserType": "current"
     },
     {
        "Title":"Game of Thrones",
@@ -44,7 +45,8 @@
        "imdbID":"tt0944947",
        "Type":"series",
        "totalSeasons":"7",
-       "Response":"True"
+       "Response":"True",
+       "UserType": "next"
     }
   ]
 }

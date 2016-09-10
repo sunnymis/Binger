@@ -1,4 +1,5 @@
-<div *ngFor="let show of myShows">
+
+<div *ngFor="let show of myShows" (click)="onSelectShow(show)">
   <h3>{{show.Title}}</h3>
   <p>{{show.Plot}}</p>
   <p><b>Seasons:</b> {{show.totalSeasons}}</p>

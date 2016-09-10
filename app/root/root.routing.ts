@@ -1,8 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { ShowsComponent } from '../shows/shows.component';
+import { ShowIndexComponent } from '../show-index/show-index.component';
 import { FinishedShowsComponent } from '../finished-shows/finished-shows.component';
 import { ShowDetailsComponent } from '../show-details/show-details.component';
+
 
 const appRoutes: Routes = [
 	{
@@ -12,7 +13,7 @@ const appRoutes: Routes = [
 	},
 	{
 		path: 'shows',
-		component: ShowsComponent
+		component: ShowIndexComponent
 	},
 	{
 		path: 'finished',
@@ -25,4 +26,4 @@ const appRoutes: Routes = [
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
-export const routedComponents = [ShowsComponent, FinishedShowsComponent];
+export const routedComponents = [ShowIndexComponent, FinishedShowsComponent];

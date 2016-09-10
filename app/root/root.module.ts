@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { RootComponent }  from './root.component';
-import { ShowsComponent } from '../shows/shows.component';
+import { ShowIndexComponent } from '../show-index/show-index.component';
 import { ShowListComponent } from '../show-list/show-list.component';
 import { NavComponent } from '../nav/nav.component';
 import { FinishedShowsComponent } from '../finished-shows/finished-shows.component';
@@ -20,7 +20,7 @@ import { ShowService } from '../services/show.service';
   ],
   declarations: [
     RootComponent,
-    ShowsComponent,
+    ShowIndexComponent,
     ShowListComponent,
     NavComponent,
     FinishedShowsComponent,

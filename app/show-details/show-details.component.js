@@ -9,16 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var show_service_1 = require('../services/show.service');
 var ShowDetailsComponent = (function () {
-    function ShowDetailsComponent() {
+    function ShowDetailsComponent(showService, route) {
+        this.showService = showService;
+        this.route = route;
     }
-    ShowDetailsComponent.prototype.ngOnInit = function () { };
+    ShowDetailsComponent.prototype.ngOnInit = function () {
+        // this.route.params.forEach((params: Params) => {
+        //   let id = params['id'];
+        //   this.showService.getShow(id)
+        //     .then(show => this.show = show )
+        // });
+    };
     ShowDetailsComponent = __decorate([
         core_1.Component({
             selector: 'show-details',
             templateUrl: 'app/show-details/show-details.component.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [show_service_1.ShowService, router_1.ActivatedRoute])
     ], ShowDetailsComponent);
     return ShowDetailsComponent;
 }());
