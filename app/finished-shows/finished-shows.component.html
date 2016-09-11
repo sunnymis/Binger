@@ -1,8 +1,6 @@
-<h2>Finished Shows</h2>
-<ul>
-  <li>Show1</li>
-  <li>Show2</li>
-  <li>Show3</li>
-  <li>Show4</li>
-  <li>Show5</li>
-</ul>
+<div *ngIf="finishedShows">
+  <h2>Finished Shows</h2>
+  <ul>
+    <li *ngFor="let show of finishedShows">{{show.Title}}</li>
+  </ul>
+</div>
