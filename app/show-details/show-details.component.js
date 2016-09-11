@@ -17,11 +17,15 @@ var ShowDetailsComponent = (function () {
         this.route = route;
     }
     ShowDetailsComponent.prototype.ngOnInit = function () {
-        // this.route.params.forEach((params: Params) => {
-        //   let id = params['id'];
-        //   this.showService.getShow(id)
-        //     .then(show => this.show = show )
-        // });
+        var _this = this;
+        this.route.params.forEach(function (params) {
+            var id = params['id'];
+            _this.showService.getShows()
+                .subscribe(function (shows) { return _this.shows = shows; }, function () { }, function () {
+                _this.show = _this.shows.filter(function (s) { return s.imdbID === id; })[0];
+                console.log(_this.show);
+            });
+        });
     };
     ShowDetailsComponent = __decorate([
         core_1.Component({

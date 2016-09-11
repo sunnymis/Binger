@@ -1,3 +1,5 @@
-<img src="" />
-<h2>Name</h2>
-<p>Description</p>
+<div *ngIf="show">
+  <img src={{show.Poster}} />
+  <h2>{{show.Title}}</h2>
+  <p>{{show.Plot}}</p>
+</div>

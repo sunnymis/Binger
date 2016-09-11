@@ -21,7 +21,8 @@ var ShowListComponent = (function () {
     };
     ShowListComponent.prototype.onSelectShow = function (show) {
         this.selectedShow = show;
-        // this.router.navigate(['/detail',show.imdbID]);
+        console.log(this.selectedShow);
+        this.router.navigate(['/details', this.selectedShow.imdbID]);
     };
     __decorate([
         core_1.Input(), 

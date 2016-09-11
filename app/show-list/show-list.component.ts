@@ -27,10 +27,10 @@ export class ShowListComponent implements OnInit {
     this.myShows = this.showList;
   }
 
-
   onSelectShow(show: Show) {
     this.selectedShow = show;
-    // this.router.navigate(['/detail',show.imdbID]);
+    console.log(this.selectedShow);
+    this.router.navigate(['/details',this.selectedShow.imdbID]);
   }
 
 
