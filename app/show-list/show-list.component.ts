@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'show-list',
   templateUrl: 'app/show-list/show-list.component.html',
-  styleUrls: ['app/css/show-list.scss']
+  styleUrls: ['app/css/show-list.css']
 })
 export class ShowListComponent implements OnInit {
   myShows: Show[];
@@ -23,15 +23,22 @@ export class ShowListComponent implements OnInit {
   ) {  }
 
   selectedShow: Show;
+  fullDetailsToggle: boolean;
 
   ngOnInit() {
     this.myShows = this.showList;
   }
 
-  onSelectShow(show: Show) {
+  onSelectShow(show: Show,event) {
     this.selectedShow = show;
     console.log(this.selectedShow);
     this.router.navigate(['/details',this.selectedShow.imdbID]);
+  }
+
+  onFullDetailsClick(event) {
+    event.stopPropagation();
+    console.log(event.target);
+    this.fullDetailsToggle = !this.fullDetailsToggle;
   }
 
 

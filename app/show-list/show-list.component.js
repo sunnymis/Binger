@@ -19,10 +19,15 @@ var ShowListComponent = (function () {
     ShowListComponent.prototype.ngOnInit = function () {
         this.myShows = this.showList;
     };
-    ShowListComponent.prototype.onSelectShow = function (show) {
+    ShowListComponent.prototype.onSelectShow = function (show, event) {
         this.selectedShow = show;
         console.log(this.selectedShow);
         this.router.navigate(['/details', this.selectedShow.imdbID]);
+    };
+    ShowListComponent.prototype.onFullDetailsClick = function (event) {
+        event.stopPropagation();
+        console.log(event.target);
+        this.fullDetailsToggle = !this.fullDetailsToggle;
     };
     __decorate([
         core_1.Input(), 
@@ -32,7 +37,7 @@ var ShowListComponent = (function () {
         core_1.Component({
             selector: 'show-list',
             templateUrl: 'app/show-list/show-list.component.html',
-            styleUrls: ['app/css/show-list.scss']
+            styleUrls: ['app/css/show-list.css']
         }), 
         __metadata('design:paramtypes', [show_service_1.ShowService, router_1.Router])
     ], ShowListComponent);
