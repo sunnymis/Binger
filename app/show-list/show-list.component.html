@@ -1,7 +1,13 @@
-
-<div *ngFor="let show of myShows" (click)="onSelectShow(show)">
-  <h3>{{show.Title}}</h3>
-  <img class="poster" src={{show.Poster}} />
-  <p>{{show.Plot}}</p>
-  <p><b>Seasons:</b> {{show.totalSeasons}}</p>
-</div>
+<div class="show-list">
+  <div *ngFor="let show of myShows" (click)="onSelectShow(show)" class="show-element">
+    <h3>{{show.Title}}</h3>
+    <div class="img-container">
+      <img class="poster" src={{show.Poster}} />
+    </div>
+    <div class="info-container">
+      <p>{{show.Plot}}</p>
+      <p><b>Seasons:</b> {{show.totalSeasons}}</p>
+      <div class="drop-arrow"></div>
+    </div>
+  </div>
+  <div>

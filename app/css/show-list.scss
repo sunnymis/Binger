@@ -1,0 +1,75 @@
+.show-list {
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.show-element {
+  height: 300px;
+
+  margin-right: 20px;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.show-element:hover {
+  background-color: #fff;
+  width: 400px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 1px red,
+  0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+  transform: scale(1.2,1.2) translate3d(20px,0,0);
+  transition-duration: 400ms;
+}
+
+.img-container {
+  float: left;
+  margin-right: 20px;
+}
+
+.show-element img {
+  height: 240px;
+}
+
+.info-container {
+  display: none;
+}
+.show-element:hover .info-container {
+  display: block;
+}
+
+.drop-arrow {
+  display: none;
+}
+
+.show-element:hover .drop-arrow {
+  display: block;
+  position: absolute;
+  right: 150px;
+  bottom: 10px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid red;
+  border-width: 0 0 5px 5px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation-name: fadeFromTop;
+  -moz-animation-name: fadeFromTop;
+  -o-animation-name: fadeFromTop;
+  animation-name: fadeFromTop;
+  -webkit-animation-duration: 0.7s;
+  -moz-animation-duration: 0.7s;
+  -o-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+}
+
+@keyframes fadeFromTop {
+  from { bottom: 20px; }
+  to { bottom: 10px }
+}

@@ -32,6 +32,7 @@ var ShowListComponent = (function () {
         core_1.Component({
             selector: 'show-list',
             templateUrl: 'app/show-list/show-list.component.html',
+            styleUrls: ['app/css/show-list.scss']
         }), 
         __metadata('design:paramtypes', [show_service_1.ShowService, router_1.Router])
     ], ShowListComponent);

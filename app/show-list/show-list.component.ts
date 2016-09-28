@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'show-list',
   templateUrl: 'app/show-list/show-list.component.html',
+  styleUrls: ['app/css/show-list.scss']
 })
 export class ShowListComponent implements OnInit {
   myShows: Show[];

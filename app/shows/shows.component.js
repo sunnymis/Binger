@@ -12,7 +12,8 @@ var core_1 = require('@angular/core');
 var ShowsComponent = (function () {
     function ShowsComponent() {
     }
-    ShowsComponent.prototype.ngOnInit = function () { };
+    ShowsComponent.prototype.ngOnInit = function () {
+    };
     ShowsComponent = __decorate([
         core_1.Component({
             selector: 'shows-component',

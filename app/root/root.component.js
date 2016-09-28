@@ -16,7 +16,8 @@ var RootComponent = (function () {
     RootComponent = __decorate([
         core_1.Component({
             selector: 'root-component',
-            template: "\n  <nav-component></nav-component>\n  <h1>Binger</h1>\n  <router-outlet></router-outlet>\n  "
+            template: "\n  <div class=\"flex-container\">\n    <nav-component></nav-component>\n    <h1>Binger</h1>\n    <router-outlet></router-outlet>\n  </div>\n  ",
+            styleUrls: ['app/css/root.scss']
         }), 
         __metadata('design:paramtypes', [])
     ], RootComponent);
