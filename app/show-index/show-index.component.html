@@ -1,4 +1,6 @@
-<h2>Current Shows</h2>
-<show-list *ngIf="currentShows" [showList]="currentShows"></show-list>
-<h2>Up Next</h2>
-<show-list *ngIf="nextShows" [showList]="nextShows"></show-list>
+<div class="show-index-container">
+    <h2>Current Shows</h2>
+    <show-list *ngIf="currentShows" [showList]="currentShows"></show-list>
+    <h2>Up Next</h2>
+    <show-list *ngIf="nextShows" [showList]="nextShows"></show-list>
+</div>
