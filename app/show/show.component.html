@@ -1,4 +1,6 @@
-<div class="show-element">
+<div class="show-element" [class.full-details-shown]="fullDetailsToggle"
+[class.show-element-hover]="!fullDetailsEnabled"
+(mouseover)="handleOnMouseOver($event)">
     <h3>{{show.Title}}</h3>
     <img class="poster" src={{show.Poster}}/>
     <div class="info-container">
@@ -11,22 +13,22 @@
             </div>
         </div>
     </div>
-    <div class="full-details-container" *ngIf="fullDetailsToggle">
-        <p>{{show.Title}}</p>
-        <div class="under-title">
-            <p>{{show.Year}}</p>
-            <p>{{show.Rated}}</p>
-            <p>{{show.totalSeasons}} Seasons</p>
-        </div>
-        <div class="description-container">
-            <p>{{show.Plot}}</p>
-        </div>
-        <div class="more-details">
-            <p>Starring: {{show.Actors}}</p>
-            <p>Genre: {{show.Genre}}</p>
-        </div>
-        <div class="full-info-img-container">
-            <img class="poster" src={{show.Poster}}/>
-        </div>
+</div>
+<div class="full-details-container" *ngIf="fullDetailsToggle">
+    <p>{{show.Title}}</p>
+    <div class="under-title">
+        <p>{{show.Year}}</p>
+        <p>{{show.Rated}}</p>
+        <p>{{show.totalSeasons}} Seasons</p>
+    </div>
+    <div class="description-container">
+        <p>{{show.Plot}}</p>
+    </div>
+    <div class="more-details">
+        <p>Starring: {{show.Actors}}</p>
+        <p>Genre: {{show.Genre}}</p>
+    </div>
+    <div class="full-info-img-container">
+        <img class="poster" src={{show.Poster}}/>
     </div>
 </div>

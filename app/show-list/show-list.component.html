@@ -2,6 +2,8 @@
     <show-component
         *ngFor="let show of myShows"
         [show]="show"
+        [fullDetailsEnabled]="fullDetailsEnabled"
+        (hoverModeEmitter)="setHoverMode($event)"
         (click)="onSelectShow(show,$event)">
     </show-component>
 </div>

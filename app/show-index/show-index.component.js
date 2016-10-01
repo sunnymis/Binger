@@ -13,6 +13,8 @@ var show_service_1 = require('../services/show.service');
 var ShowIndexComponent = (function () {
     function ShowIndexComponent(showService) {
         this.showService = showService;
+        this.searchedShows = [];
+        this.overlayEnabled = false;
     }
     ShowIndexComponent.prototype.getShows = function () {
         var _this = this;
@@ -26,6 +28,33 @@ var ShowIndexComponent = (function () {
     ShowIndexComponent.prototype.ngOnInit = function () {
         this.getShows();
     };
+    ShowIndexComponent.prototype.openOverlay = function (event) {
+        this.overlayEnabled = true;
+        this.overlaySearchBox.nativeElement.focus();
+    };
+    ShowIndexComponent.prototype.closeOverlay = function (event) {
+        this.overlayEnabled = false;
+    };
+    ShowIndexComponent.prototype.handleOverlayKeyDown = function (event) {
+        if (event.which === 27) {
+            this.closeOverlay(null);
+        }
+    };
+    ShowIndexComponent.prototype.handleOnInputChange = function (text) {
+        var _this = this;
+        var result = [];
+        var result2 = [];
+        this.showService.getShows()
+            .subscribe((function (shows) { return _this.allShows = shows; }), function () {
+        }, function () {
+            _this.searchedShows = _this.allShows.filter(function (show) { return show.Title.toLowerCase().indexOf(text.toLowerCase()) !== -1; });
+        });
+        console.log(this.searchedShows);
+    };
+    __decorate([
+        core_1.ViewChild('overlaySearchBox'), 
+        __metadata('design:type', Object)
+    ], ShowIndexComponent.prototype, "overlaySearchBox", void 0);
     ShowIndexComponent = __decorate([
         core_1.Component({
             selector: 'show-index',

@@ -1,3 +1,55 @@
 .show-index-container {
-  width: 100%;
+    width: 100%;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.2s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 75%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.overlay-content input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 50px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 100%;
+}
+
+.overlay-content:hover {
+    outline: 5px white;
+}
+
+.overlay .close-button {
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.show-overlay {
+    width: 100%;
+}
+
+.searched-show-list {
+
 }

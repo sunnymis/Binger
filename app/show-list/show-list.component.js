@@ -24,6 +24,9 @@ var ShowListComponent = (function () {
         console.log(this.selectedShow);
         this.router.navigate(['/details', this.selectedShow.imdbID]);
     };
+    ShowListComponent.prototype.setHoverMode = function (fullDetailsToggled) {
+        this.fullDetailsEnabled = (fullDetailsToggled) ? true : false;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Array)

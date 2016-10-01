@@ -12,17 +12,32 @@ var core_1 = require('@angular/core');
 var show_1 = require('../models/show');
 var ShowComponent = (function () {
     function ShowComponent() {
+        this.hoverModeEmitter = new core_1.EventEmitter();
     }
     ShowComponent.prototype.ngOnInit = function () {
     };
     ShowComponent.prototype.onFullDetailsClick = function (event) {
         event.stopPropagation();
         this.fullDetailsToggle = !this.fullDetailsToggle;
+        this.hoverModeEmitter.emit(this.fullDetailsToggle);
+    };
+    ShowComponent.prototype.handleOnMouseOver = function (event) {
+        if (this.fullDetailsEnabled) {
+            this.fullDetailsToggle = true;
+        }
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', show_1.Show)
     ], ShowComponent.prototype, "show", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], ShowComponent.prototype, "fullDetailsEnabled", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], ShowComponent.prototype, "hoverModeEmitter", void 0);
     ShowComponent = __decorate([
         core_1.Component({
             selector: 'show-component',

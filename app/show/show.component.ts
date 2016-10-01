@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Show} from '../models/show';
 @Component({
     selector: 'show-component',
@@ -10,6 +10,8 @@ export class ShowComponent implements OnInit {
     }
 
     @Input() show: Show;
+    @Input() fullDetailsEnabled: boolean;
+    @Output() hoverModeEmitter = new EventEmitter();
     fullDetailsToggle: boolean;
 
     ngOnInit() {
@@ -18,5 +20,12 @@ export class ShowComponent implements OnInit {
     onFullDetailsClick(event) {
         event.stopPropagation();
         this.fullDetailsToggle = !this.fullDetailsToggle;
+        this.hoverModeEmitter.emit(this.fullDetailsToggle);
+    }
+
+    handleOnMouseOver(event) {
+        if (this.fullDetailsEnabled) {
+            this.fullDetailsToggle = true;
+        }
     }
 }

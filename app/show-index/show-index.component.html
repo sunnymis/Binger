@@ -1,4 +1,22 @@
 <div class="show-index-container">
+    <div class="overlay" [class.show-overlay]="overlayEnabled" >
+        <span class="close-button" (click)="closeOverlay($event)">&times;</span>
+        <div class="overlay-content">
+            <input #overlaySearchBox type="text"
+                   (keydown)="handleOverlayKeyDown($event)" (input)="handleOnInputChange($event.target.value)"/>
+
+            <div class="searched-show-list" *ngIf="overlaySearchBox.value.length > 0">
+                <show-component
+                        *ngFor="let show of searchedShows"
+                        [show]="show"
+                        [fullDetailsEnabled]="fullDetailsEnabled"
+                        (hoverModeEmitter)="setHoverMode($event)"
+                        (click)="onSelectShow(show,$event)">
+                </show-component>
+            </div>
+        </div>
+    </div>
+    <input type="text" placeholder="Search" (click)="openOverlay($event)"/>
     <h2>Current Shows</h2>
     <show-list *ngIf="currentShows" [showList]="currentShows"></show-list>
     <h2>Up Next</h2>
