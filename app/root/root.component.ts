@@ -10,7 +10,7 @@ import '../rxjs-operators';
     <router-outlet></router-outlet>
   </div>
   `,
-  styleUrls: ['app/css/root.scss']
+  styleUrls: ['app/root/root.component.css']
 })
 
 export class RootComponent { }

@@ -17,7 +17,8 @@ var ShowIndexComponent = (function () {
     ShowIndexComponent.prototype.getShows = function () {
         var _this = this;
         return this.showService.getShows()
-            .subscribe((function (shows) { return _this.allShows = shows; }), function () { }, function () {
+            .subscribe((function (shows) { return _this.allShows = shows; }), function () {
+        }, function () {
             _this.currentShows = _this.allShows.filter(function (show) { return show.UserType === "current"; });
             _this.nextShows = _this.allShows.filter(function (show) { return show.UserType === "next"; });
         });
@@ -28,7 +29,8 @@ var ShowIndexComponent = (function () {
     ShowIndexComponent = __decorate([
         core_1.Component({
             selector: 'show-index',
-            templateUrl: 'app/show-index/show-index.component.html'
+            templateUrl: 'app/show-index/show-index.component.html',
+            styleUrls: ['app/show-index/show-index.component.css']
         }), 
         __metadata('design:paramtypes', [show_service_1.ShowService])
     ], ShowIndexComponent);

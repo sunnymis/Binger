@@ -9,19 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ShowsComponent = (function () {
-    function ShowsComponent() {
+var show_1 = require('../models/show');
+var ShowComponent = (function () {
+    function ShowComponent() {
     }
-    ShowsComponent.prototype.ngOnInit = function () {
+    ShowComponent.prototype.ngOnInit = function () {
     };
-    ShowsComponent = __decorate([
+    ShowComponent.prototype.onFullDetailsClick = function (event) {
+        event.stopPropagation();
+        this.fullDetailsToggle = !this.fullDetailsToggle;
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', show_1.Show)
+    ], ShowComponent.prototype, "show", void 0);
+    ShowComponent = __decorate([
         core_1.Component({
-            selector: 'shows-component',
-            templateUrl: 'app/shows/shows.component.html'
+            selector: 'show-component',
+            templateUrl: 'app/show/show.component.html',
+            styleUrls: ['app/show/show.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], ShowsComponent);
-    return ShowsComponent;
+    ], ShowComponent);
+    return ShowComponent;
 }());
-exports.ShowsComponent = ShowsComponent;
-//# sourceMappingURL=shows.component.js.map
+exports.ShowComponent = ShowComponent;
+//# sourceMappingURL=show.component.js.map

@@ -21,7 +21,8 @@ var ShowDetailsComponent = (function () {
         this.route.params.forEach(function (params) {
             var id = params['id'];
             _this.showService.getShows()
-                .subscribe(function (shows) { return _this.shows = shows; }, function () { }, function () {
+                .subscribe(function (shows) { return _this.shows = shows; }, function () {
+            }, function () {
                 _this.show = _this.shows.filter(function (s) { return s.imdbID === id; })[0];
                 console.log(_this.show);
             });
@@ -31,6 +32,7 @@ var ShowDetailsComponent = (function () {
         core_1.Component({
             selector: 'show-details',
             templateUrl: 'app/show-details/show-details.component.html',
+            styleUrls: ['app/show-details/show-details.component.css']
         }), 
         __metadata('design:paramtypes', [show_service_1.ShowService, router_1.ActivatedRoute])
     ], ShowDetailsComponent);

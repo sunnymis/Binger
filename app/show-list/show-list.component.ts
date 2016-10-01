@@ -3,13 +3,14 @@ import { Router } from '@angular/router';
 
 import { Show } from '../models/show';
 import { ShowService } from '../services/show.service';
+import { ShowComponent } from '../show/show.component';
 import { Observable } from 'rxjs/Observable';
 
 
 @Component({
   selector: 'show-list',
   templateUrl: 'app/show-list/show-list.component.html',
-  styleUrls: ['app/css/show-list.css']
+  styleUrls: ['app/show-list/show-list.component.css']
 })
 export class ShowListComponent implements OnInit {
   myShows: Show[];
@@ -23,7 +24,7 @@ export class ShowListComponent implements OnInit {
   ) {  }
 
   selectedShow: Show;
-  fullDetailsToggle: boolean;
+
 
   ngOnInit() {
     this.myShows = this.showList;
@@ -35,11 +36,7 @@ export class ShowListComponent implements OnInit {
     this.router.navigate(['/details',this.selectedShow.imdbID]);
   }
 
-  onFullDetailsClick(event) {
-    event.stopPropagation();
-    console.log(event.target);
-    this.fullDetailsToggle = !this.fullDetailsToggle;
-  }
+
 
 
 }
