@@ -2,7 +2,11 @@
     width: 100%;
 }
 
-
-.searched-show-list {
-
+h2 {
+    color: #ffffff;
+    position: relative;
+    top: 100px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 4px;
+    color: rgba(242, 38, 19,0.8);
 }
