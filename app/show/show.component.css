@@ -52,6 +52,11 @@
     display: none;
 }
 
+#show-title {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+}
+
 .drop-arrow-container {
     position: absolute;
     right: 0;

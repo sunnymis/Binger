@@ -6,7 +6,6 @@ import '../rxjs-operators';
   template: `
   <div class="flex-container">
     <nav-component></nav-component>
-    <h1>Binger</h1>
     <router-outlet></router-outlet>
   </div>
   `,

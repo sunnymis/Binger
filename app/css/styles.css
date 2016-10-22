@@ -1,11 +1,7 @@
-h1 {
-    color       : #F22613;
-    font-family : sans-serif;
-    font-size   : 250%;
-}
+
 
 body {
     overflow-x: hidden;
-    background-color: #747E84;
     width: 100%;
+    background: rgba(20,20,20,.95);
 }

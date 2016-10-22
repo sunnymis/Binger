@@ -11,12 +11,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var NavComponent = (function () {
     function NavComponent() {
+        this.overlayEnabled = false;
     }
     NavComponent.prototype.ngOnInit = function () { };
+    NavComponent.prototype.openOverlay = function (event) {
+        this.overlayEnabled = true;
+    };
+    NavComponent.prototype.handleOverlayEmitter = function (event) {
+        this.overlayEnabled = event;
+    };
     NavComponent = __decorate([
         core_1.Component({
             selector: 'nav-component',
             templateUrl: 'app/nav/nav.component.html',
+            styleUrls: ['app/nav/nav.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], NavComponent);

@@ -9,6 +9,7 @@ import {NavComponent} from '../nav/nav.component';
 import {FinishedShowsComponent} from '../finished-shows/finished-shows.component';
 import {ShowDetailsComponent} from '../show-details/show-details.component';
 import {ShowComponent} from '../show/show.component';
+import { SearchOverlayComponent } from '../search-overlay/search-overlay.component';
 import {routing, routedComponents} from './root.routing';
 import {ShowService} from '../services/show.service';
 
@@ -27,6 +28,7 @@ import {ShowService} from '../services/show.service';
         FinishedShowsComponent,
         ShowDetailsComponent,
         ShowComponent,
+        SearchOverlayComponent,
         routedComponents
     ],
     providers: [

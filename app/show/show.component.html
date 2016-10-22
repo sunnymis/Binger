@@ -1,7 +1,7 @@
 <div class="show-element" [class.full-details-shown]="fullDetailsToggle"
 [class.show-element-hover]="!fullDetailsEnabled"
 (mouseover)="handleOnMouseOver($event)">
-    <h3>{{show.Title}}</h3>
+    <h3 id="show-title">{{show.Title}}</h3>
     <img class="poster" src={{show.Poster}}/>
     <div class="info-container">
         <img class="info-container-poster" src={{show.Poster}}/>
