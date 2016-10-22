@@ -20,6 +20,10 @@ nav {
     color: #F22613
 }
 
+#binger-title:hover {
+    cursor: pointer;
+}
+
 li {
     margin: 20px;
 }
@@ -48,8 +52,12 @@ li {
     display: inline-block;
 }
 
+#nav-home:hover {
+    cursor: pointer;
+}
 
-#search-button {
+#nav-finished:hover {
+    cursor: pointer;
 }
 
 #search-button span {
@@ -60,6 +68,11 @@ li {
     cursor: pointer;
 }
 
-#login-button {
+#login-button span {
+    padding-left: 10px;
+}
+
+#login-button:hover {
+    cursor: pointer;
 }
 
