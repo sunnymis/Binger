@@ -22,7 +22,7 @@ var ShowComponent = (function () {
         this.hoverModeEmitter.emit(this.fullDetailsToggle);
     };
     ShowComponent.prototype.handleOnMouseOver = function (event) {
-        if (this.fullDetailsEnabled) {
+        if (this.hoverable && this.fullDetailsEnabled) {
             this.fullDetailsToggle = true;
         }
     };
@@ -34,6 +34,10 @@ var ShowComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', Boolean)
     ], ShowComponent.prototype, "fullDetailsEnabled", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
+    ], ShowComponent.prototype, "hoverable", void 0);
     __decorate([
         core_1.Output(), 
         __metadata('design:type', Object)

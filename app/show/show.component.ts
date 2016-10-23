@@ -11,6 +11,7 @@ export class ShowComponent implements OnInit {
 
     @Input() show: Show;
     @Input() fullDetailsEnabled: boolean;
+    @Input() hoverable: boolean;
     @Output() hoverModeEmitter = new EventEmitter();
     fullDetailsToggle: boolean;
 
@@ -24,7 +25,7 @@ export class ShowComponent implements OnInit {
     }
 
     handleOnMouseOver(event) {
-        if (this.fullDetailsEnabled) {
+        if (this.hoverable && this.fullDetailsEnabled) {
             this.fullDetailsToggle = true;
         }
     }

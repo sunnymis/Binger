@@ -1,5 +1,5 @@
 <div class="show-element" [class.full-details-shown]="fullDetailsToggle"
-[class.show-element-hover]="!fullDetailsEnabled"
+[class.show-element-hover]="hoverable === true"
 (mouseover)="handleOnMouseOver($event)">
     <h3 id="show-title">{{show.Title}}</h3>
     <img class="poster" src={{show.Poster}}/>

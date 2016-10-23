@@ -8,7 +8,7 @@
             <show-component
                     *ngFor="let show of searchedShows"
                     [show]="show"
-                    (hoverModeEmitter)="setHoverMode($event)"
+                    [hoverable]="false"
                     (click)="onSelectShow(show,$event)">
             </show-component>
         </div>
