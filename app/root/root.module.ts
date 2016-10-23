@@ -10,6 +10,7 @@ import {FinishedShowsComponent} from '../finished-shows/finished-shows.component
 import {ShowDetailsComponent} from '../show-details/show-details.component';
 import {ShowComponent} from '../show/show.component';
 import { SearchOverlayComponent } from '../search-overlay/search-overlay.component';
+import { LandingComponent } from '../landing/landing.component';
 import {routing, routedComponents} from './root.routing';
 import {ShowService} from '../services/show.service';
 
@@ -29,6 +30,7 @@ import {ShowService} from '../services/show.service';
         ShowDetailsComponent,
         ShowComponent,
         SearchOverlayComponent,
+        LandingComponent,
         routedComponents
     ],
     providers: [

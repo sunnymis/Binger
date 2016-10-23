@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShowIndexComponent } from '../show-index/show-index.component';
 import { FinishedShowsComponent } from '../finished-shows/finished-shows.component';
 import { ShowDetailsComponent } from '../show-details/show-details.component';
-
+import { LandingComponent } from '../landing/landing.component';
 
 const appRoutes: Routes = [
 	{
@@ -18,6 +18,10 @@ const appRoutes: Routes = [
 	{
 		path: 'finished',
 		component: FinishedShowsComponent
+	},
+	{
+		path: 'landing',
+		component: LandingComponent
 	},
 	{
 		path: 'details/:id',

@@ -1,0 +1,12 @@
+.landing-container {
+
+}
+
+.landing-title {
+    font-family: 'Bangers', cursive;
+    font-size: 125px;
+    color: #F22613;
+    letter-spacing: 4px;
+    text-align: center;
+    padding-top: 50px;
+}

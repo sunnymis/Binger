@@ -19,6 +19,7 @@ var finished_shows_component_1 = require('../finished-shows/finished-shows.compo
 var show_details_component_1 = require('../show-details/show-details.component');
 var show_component_1 = require('../show/show.component');
 var search_overlay_component_1 = require('../search-overlay/search-overlay.component');
+var landing_component_1 = require('../landing/landing.component');
 var root_routing_1 = require('./root.routing');
 var show_service_1 = require('../services/show.service');
 var RootModule = (function () {
@@ -41,6 +42,7 @@ var RootModule = (function () {
                 show_details_component_1.ShowDetailsComponent,
                 show_component_1.ShowComponent,
                 search_overlay_component_1.SearchOverlayComponent,
+                landing_component_1.LandingComponent,
                 root_routing_1.routedComponents
             ],
             providers: [

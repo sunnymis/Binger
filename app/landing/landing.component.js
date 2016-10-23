@@ -9,22 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-require('../rxjs-operators');
-var RootComponent = (function () {
-    function RootComponent() {
+var LandingComponent = (function () {
+    function LandingComponent() {
     }
-    RootComponent.prototype.ngOnInit = function () {
-        this.isLanding = (window.location.pathname === '/landing') ? true : false;
+    LandingComponent.prototype.ngOnInit = function () {
     };
-    RootComponent = __decorate([
+    LandingComponent = __decorate([
         core_1.Component({
-            selector: 'root-component',
-            template: "\n  <div class=\"flex-container\">\n    <nav-component *ngIf=\"!isLanding\"></nav-component>\n    <router-outlet></router-outlet>\n  </div>\n  ",
-            styleUrls: ['app/root/root.component.css']
+            selector: 'landing',
+            templateUrl: 'app/landing/landing.component.html',
+            styleUrls: ['app/landing/landing.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], RootComponent);
-    return RootComponent;
+    ], LandingComponent);
+    return LandingComponent;
 }());
-exports.RootComponent = RootComponent;
-//# sourceMappingURL=root.component.js.map
+exports.LandingComponent = LandingComponent;
+//# sourceMappingURL=landing.component.js.map
