@@ -1,0 +1,20 @@
+.show-detail-container {
+    margin-top: 200px;
+    color: white;
+}
+
+img {
+    float: left;
+    margin-left: 100px;
+}
+
+.show-details {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.details-key {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 4px;
+    color: rgba(242, 38, 19,0.8);
+}

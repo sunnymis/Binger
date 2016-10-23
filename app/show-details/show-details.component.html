@@ -1,5 +1,12 @@
-<div *ngIf="show">
+<div class="show-detail-container" *ngIf="show">
   <img src={{show.Poster}} />
-  <h2>{{show.Title}}</h2>
-  <p>{{show.Plot}}</p>
+  <div class="show-details">
+    <h1><span class="details-key">{{show.Title}}</span></h1>
+    <p>{{show.Plot}}</p>
+    <p><span class="details-key">IMDB Rating:</span> {{show.imdbRating}}</p>
+    <p><span class="details-key">Genre:</span> {{show.Genre}}</p>
+    <p><span class="details-key">Total Seasons:</span> {{show.totalSeasons}}</p>
+    <p>You've currently watched <span class="details-key">X</span> seasons</p>
+    <p>Friends that have watched {{show.Title}}</p>
+  </div>
 </div>
