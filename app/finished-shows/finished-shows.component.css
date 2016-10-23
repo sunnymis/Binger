@@ -1,0 +1,10 @@
+.finished-shows-container {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 4px;
+    color: rgba(242, 38, 19,0.8);
+    margin-top: 100px;
+}
+
+li {
+    list-style: none;
+}

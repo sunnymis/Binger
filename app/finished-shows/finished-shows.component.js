@@ -27,6 +27,7 @@ var FinishedShowsComponent = (function () {
         core_1.Component({
             selector: 'finished-shows',
             templateUrl: 'app/finished-shows/finished-shows.component.html',
+            styleUrls: ['app/finished-shows/finished-shows.component.css']
         }), 
         __metadata('design:paramtypes', [show_service_1.ShowService])
     ], FinishedShowsComponent);

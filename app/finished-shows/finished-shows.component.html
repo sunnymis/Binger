@@ -1,6 +1,9 @@
-<div *ngIf="finishedShows">
+<div class="finished-shows-container" *ngIf="finishedShows">
   <h2>Finished Shows</h2>
   <ul>
-    <li *ngFor="let show of finishedShows">{{show.Title}}</li>
+    <li *ngFor="let show of finishedShows">
+      <p>{{show.Title}}</p>
+      <img src="{{show.Poster}}" />
+    </li>
   </ul>
 </div>

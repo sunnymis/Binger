@@ -6,6 +6,7 @@ import { Show } from '../models/show';
 @Component({
   selector: 'finished-shows',
   templateUrl: 'app/finished-shows/finished-shows.component.html',
+  styleUrls: ['app/finished-shows/finished-shows.component.css']
 })
 export class FinishedShowsComponent implements OnInit {
   constructor(private showService: ShowService) {  }
